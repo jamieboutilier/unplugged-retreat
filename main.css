@@ -148,11 +148,11 @@ ont-size: .875em;
 }
  
 img {
- 
+ width: 100%;
 }
  
 figure {
- 
+ margin: 0; 
 }
  
 address {
@@ -172,7 +172,7 @@ address {
 header,
 footer {
   background-color: #202322;
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
@@ -188,6 +188,14 @@ header .content-wrapper {
   align-items: center;
   flex-flow: row wrap;
   margin: 0;
+}
+
+header figure {
+	width: 60%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap; 
 }
 
 .header-divider {
@@ -206,7 +214,6 @@ header nav {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
 }
 
 header nav ul {
@@ -258,9 +265,13 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
+   background: url (../img/unplugged-retreat-lacrue.jpg);
+   background-size: cover;
+   background-position: center; 
+   min-height: 500px; 
+   display: flex;
+   justify-content: center;
+   flex-flow: row wrap;
 }
 
 .hero-area h1{
@@ -304,6 +315,9 @@ input[type=button] {
 /* Features */
 
 .features {
+  background: url('../img/unplugged-retreat-features.jpg')
+  background-size: cover;
+  background-position: center; 
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -326,6 +340,7 @@ input[type=button] {
 }
 
 .features p {
+  text-align: center; 
   margin: 0;
 }
 
@@ -340,6 +355,7 @@ input[type=button] {
 
 .reviews h2 {
   margin-bottom: 40px;
+	line-height: 1; 
 }
 
 .reviews h3 {
@@ -500,6 +516,15 @@ input[type=button] {
       margin: 100px 0;
     }
   
+	h2{
+		font-size: 2.25em; 
+		line-height: 1.333;
+	}
+	h3 {
+		font-size: 1.5em; 
+		line-height: 1.25;
+	}
+	
     /* Header */
     header {
       justify-content: space-around;
@@ -570,10 +595,11 @@ input[type=button] {
       justify-content: space-between;
     }
   
-	.reviewsh2 {
+	.reviews h2 {
 		width: 90%;
 	}
 	
+	.reviews article figure, 
     .reviews article div {
       width: 49%;
     }
